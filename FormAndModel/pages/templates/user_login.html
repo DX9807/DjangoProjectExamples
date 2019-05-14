@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>User_Login</title>
+  </head>
+  <body>
+    {% block body_content %}
+
+<div class="container">
+    <h1>Fill the forms please!</h1>
+    <h2>That's ok!</h2>
+    <div class="container">
+    <form method="post">
+      {% csrf_token %}
+
+      {{ form1.as_p }}
+
+
+      <br>
+      {{ form2.as_p }}
+
+     <input type="submit" name="" value="submit">
+
+    </form>
+    </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
